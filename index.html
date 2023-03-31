@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .row:after {
+            content: "";
+            display: flex;
+            clear: both;
+        }
+        
+        .column-1 {
+            width: 100%;
+            height: 700px;
+        }
+
+        .column-2 {
+            width: 50%;
+            height: 300px;
+            float: left;
+            background-color: white;
+            flex-wrap: wrap;
+        }
+        
+        .column-3 {
+            width: 33.33%;
+            height: 300px;
+            float: left;
+        }
+        
+        .column-4 {
+            width: 33.33%;
+            float: left;
+        }
+        
+        .proyectos {
+            text-align: center;
+        }
+
+        .green {
+            background-color: white
+        }
+        .cyan {
+            background-color: #62CAAC;
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            color: white;
+        }
+        .column-5 {
+            height: 150px;
+            width: 50%;
+            background-color: #B6BDBB;
+            float: left;
+        }
+        .column-black {
+            background-color: black;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .img {
+            height: 80%;      
+            float: left;
+            margin-left: 20%;
+        }
+
+        @media screen and (max-width: 600px) {
+             .column-1 {
+             width: 100%;
+         }
+          .column-2 {
+             width: 100%;
+             height: 400px;
+            float: left;
+         background-color: white;
+          flex-wrap: wrap;
+          }
+            .column-3 {
+             width: 50%;
+            height: 300px;
+            float: left;
+          }
+            .column-4 {
+          width: 100%;
+          float: left;
+         }
+          .img {
+          width: 50%;
+          height: 200px;
+          margin-left: 70px;
+         }
+         .column-5
+          {
+            width: 100%;
+            float: left;
+          }
+            }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="row">
+        <div class="column-1 primero"><img src="img/header.jpg" width="100%" height="700px"></div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="proyectos">PROYECTOS</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-3 green"><img class="img" src="img/github.png" sizes="33.33%"></div>
+        <div class="column-3 green"><img class="img" src="img/github.png" sizes="33.33%"></div>
+        <div class="column-3 green"><img class="img" src="img/github.png" sizes="33.33%"></div>
+        <div class="column-3 green"><img class="img" src="img/github.png" sizes="33.33%"></div>
+        <div class="column-3 green"><img class="img" src="img/github.png" sizes="33.33%"></div>
+        <div class="column-3 green"><img class="img" src="img/github.png" sizes="33.33%"></div>
+    </div>
+    <div class="row">
+        <div style="font-size: 25px;" class="column-4 cyan"><br>¡DANOS TU FEEDBACK!<br> <br>
+            <a style="font-size: 20px;">Es muy importante para nosotros recibir tus críticas y sugerencias</a>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="column-2" style="font-size: 25px; padding: 2%;">Sobre el proyecto <br>
+                <a style="font-size: 15px;">¡La innovación de la mañana viene del aprendizaje de ahora! <br>
+                Bienvenido al repositorio de proyectos web. Aquí podrás encontrar, de manera centralizada, los distintos trabajos desarrollados a lo largo del curso 2020-2021.</a> <br> 
+                <a style="font-size: 25px;">Preguntas frecuentes</a> <br>
+                <a style="font-size: 15px;">¿Qué es HTML? <br>
+                ¿Qué es CSS? <br>
+                ¿Qué es Git? <br>
+                ¿Qué es GitHub?</a>
+            </div>
+            <div class="column-2" style="display: flex; float: left; padding: 2%;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8229.879999420576!2d2.109461383111035!3d41.353162391820916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498d64bd023fd%3A0x26089fc39cb352a3!2sCentro%20de%20Estudios%20Joan%20XXIII!5e0!3m2!1ses!2ses!4v1679930229108!5m2!1ses!2ses" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="column-5" style="color: black; width: 50%; padding: 2%;" >¡Hecho en Barclona con coraxón y mucho café!</div>
+            <div class="column-5" style="color: black; width: 25%; padding: 2%;">Soporte <br><br>
+                <a style="color: white;">Repositorio de GitHub <br><br>
+                Reportar un error <br></a>
+            </div>
+            <div class="column-5" style="color: black; width: 25%; padding: 2%;">Diseñador <br><br>
+            <a style="color: white;">Twitter <br><br>
+            Instagram</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-black"><a style="color: white; text-align: center;">2021-2022</a></div>
+    </div>
+    <footer></footer>
+</body>
